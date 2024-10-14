@@ -1,4 +1,3 @@
-MenuScreen.java
 import greenfoot.*;
 
 public class MenuScreen extends World {
