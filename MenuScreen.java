@@ -10,5 +10,4 @@ public class MenuScreen extends World {
   public void goInstructions() {
     Greenfoot.setWorld(new InstructionScreen(this));
   }
-
 }
