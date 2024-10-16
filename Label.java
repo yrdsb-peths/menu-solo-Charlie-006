@@ -13,7 +13,7 @@ public class Label extends Actor
     {
         this(Integer.toString(value), fontSize);
     }
-    
+
     public Label(String value, int fontSize)
     {
         this.value = value;
@@ -32,7 +32,7 @@ public class Label extends Actor
         this.value = Integer.toString(value);
         updateImage();
     }
-
+    
     public void setLineColor(Color lineColor)
     {
         this.lineColor = lineColor;
