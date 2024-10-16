@@ -6,9 +6,11 @@ public class InstructionScreen extends World {
         super(600, 400, 1);
         this.previousWorld = previousWorld;
 
+        Button ButtonNext = new Button();
+        Button ButtonPrevious = new Button();
 
-        addObject(new Button(this::nextInstruction), 500, 340);
-        addObject(new Button(this::previousInstruction), 100, 340);
+        addObject(ButtonNext, 500, 340);
+        addObject(ButtonPrevious, 100, 340);
     }
 
   public void goPrevious() {
