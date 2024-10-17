@@ -6,8 +6,6 @@ public class Label extends Actor
     private int fontSize;
     private Color lineColor = Color.BLACK;
     private Color fillColor = Color.WHITE;
-    
-    private static final Color transparent = new Color(0,0,0,0);
 
     public Label(int value, int fontSize)
     {
@@ -47,6 +45,6 @@ public class Label extends Actor
 
     private void updateImage()
     {
-        setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
+        setImage(new GreenfootImage(value, fontSize, fillColor, lineColor));
     }
 }
