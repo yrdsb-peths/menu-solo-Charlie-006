@@ -16,6 +16,7 @@ public class InstructionScreen extends World {
         this.previousWorld = previousWorld;
         instructionLabel = new Label(instructions[Index], 30);
         
+        addObject(instructionLabel, 300, 200);
         addObject(new Button(this::nextInstruction, "Next"), 500, 340);
         addObject(new Button(this::previousInstruction, "Previous"), 100, 340);
   }
