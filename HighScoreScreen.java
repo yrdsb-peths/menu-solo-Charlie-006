@@ -4,10 +4,11 @@ import java.util.HashMap;
 
 public class HighScoreScreen extends World {
   private Map<String, Integer> highScores;
+  private World menuScreen;
 
-  public HighScoreScreen() {
-    // Create the world
+  public HighScoreScreen(World menuScreen) {
     super(600, 400, 1);
+    this.menuScreen = menuScreen;
 
     highScores = new HashMap<>();
     highScores.put("Alice", 1500);
@@ -15,6 +16,7 @@ public class HighScoreScreen extends World {
     highScores.put("Charlie", 900);
 
     displayHighScores();
+    addObject(new Button(this::goBacktoMenu, "Menu"), 150, 400);
   }
 
   public void displayHighScores() {
@@ -31,5 +33,9 @@ public class HighScoreScreen extends World {
 
       yint += 50;
     }
+  }
+
+  public void goBacktoMenu() {
+    Greenfoot.setWorld(menuScreen);
   }
 }
