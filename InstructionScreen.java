@@ -22,10 +22,10 @@ public class InstructionScreen extends World {
         addObject(instructionLabel, 300, 200);
 
         // Add Next and Previous buttons
-        addObject(new Button(this::nextInstruction, "Next"), 450, 340);
-        addObject(new Button(this::previousInstruction, "Previous"), 130, 340);
+        addObject(new Button(this::nextInstruction, "Next"), 500, 340);
+        addObject(new Button(this::previousInstruction, "Previous"), 100, 340);
 
-        addObject(new Button(this :: goPrevious, "Menu"), 250, 340);
+        addObject(new Button(this :: goPrevious, "Menu"), 300, 340);
     }
 
     public void nextInstruction() {
