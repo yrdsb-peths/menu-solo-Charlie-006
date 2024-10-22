@@ -18,6 +18,18 @@ public class HighScoreScreen extends World {
   }
 
   public void displayHighScores() {
-    
+    int yint = 100;
+    Label title = new Label("High Score:", 30);
+    addObject(title, getWidth() / 2, 100);
+
+    for (Map.Entry<String, Integer> entry : highScores.entrySet()) {
+      String key = entry.getKey();
+      int value = entry.getValue();
+
+      Label scoreLabel = new Label(key + ": ", value);
+      addObject(scoreLabel, getWidth() / 2, yint);
+
+      yint += 50;
+    }
   }
 }
