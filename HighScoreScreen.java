@@ -24,12 +24,17 @@ public class HighScoreScreen extends World {
     int yint = 150;
     Label title = new Label("High Score:", 40);
     addObject(title, 300, 100);
+    addObject(new Button(this::goBacktoMenu, "Menu"), 150, 400);
+  }
+
+
     for (Map.Entry<String, Integer> entry : highScores.entrySet()) {
       String key = entry.getKey();
       int value = entry.getValue();
 
       Label scoreLabel = new Label(key + ": " + value, 40);
       addObject(scoreLabel, getWidth() / 2, yint);
+
       yint += 50;
     }
   }
