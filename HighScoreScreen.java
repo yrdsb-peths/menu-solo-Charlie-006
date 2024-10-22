@@ -3,10 +3,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class HighScoreScreen extends World {
-  private Map<String, Integer> highScores;
-  private World menuScreen;
+    private Map<String, Integer> highScores;
+    private World menuScreen;
 
-  public HighScoreScreen(World menuScreen) {
+public HighScoreScreen(World menuScreen) {
     super(600, 400, 1);
     this.menuScreen = menuScreen;
 
@@ -24,9 +24,6 @@ public class HighScoreScreen extends World {
     int yint = 150;
     Label title = new Label("High Score:", 40);
     addObject(title, 300, 100);
-    addObject(new Button(this::goBacktoMenu, "Menu"), 150, 400);
-  }
-
 
     for (Map.Entry<String, Integer> entry : highScores.entrySet()) {
       String key = entry.getKey();
@@ -37,9 +34,9 @@ public class HighScoreScreen extends World {
 
       yint += 50;
     }
-  }
+}
 
-  public void goBacktoMenu() {
-    Greenfoot.setWorld(menuScreen);
-  }
+public void goBacktoMenu() {
+      Greenfoot.setWorld(menuScreen);
+    } 
 }
